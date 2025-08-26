@@ -1,7 +1,8 @@
 import { Card } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
-import { Palette, Code, Users, Zap } from "lucide-react";
 import { useScrollAnimation, useParallax } from "../hooks/use-Parallax";
+import { FaFigma, FaReact, FaPython } from "react-icons/fa";
+import { SiNumpy, SiPandas, SiFastapi, SiTailwindcss } from "react-icons/si";
+import { MdDesignServices } from "react-icons/md";
 
 const Skills = () => {
   const scrollRef = useScrollAnimation();
@@ -9,51 +10,44 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      icon: Palette,
       title: "UI/UX Design",
       color: "neon-blue",
       skills: [
-        { name: "UI/UX Design", level: 80 },
-        { name: "Prototyping", level: 73 },
-        { name: "Wireframing", level: 71 },
-        { name: "Figma", level: 95 },
+        { name: "Figma", icon: FaFigma },
+        { name: "Wireframing", icon: MdDesignServices },
+        { name: "Prototyping", icon: MdDesignServices },
       ],
     },
     {
-      icon: Code,
       title: "Frontend Development",
       color: "neon-purple",
       skills: [
-        { name: "React Native", level: 58 },
-        { name: "React JS", level: 58 },
-        { name: "HTML/CSS", level: 37 },
+        { name: "React Native", icon: FaReact },
+        { name: "React JS", icon: FaReact },
+        { name: "Tailwind CSS", icon: SiTailwindcss },
       ],
     },
     {
-      icon: Users,
-      title: "Python and Backend",
+      title: "Python & Backend",
       color: "neon-cyan",
       skills: [
-        { name: "FastAPI (basic)", level: 51 },
-        { name: "Analytics & Testing", level: 13 },
+        { name: "Python", icon: FaPython },
+        { name: "FastAPI", icon: SiFastapi },
       ],
     },
     {
-      icon: Zap,
-      title: "AI Stuffs",
+      title: "AI & Data",
       color: "neon-pink",
       skills: [
-        { name: "Python", level: 70 },
-        { name: "NumPy", level: 30 },
-        { name: "Pandas", level: 5 },
-        { name: "Generative AI", level: 10 },
+        { name: "NumPy", icon: SiNumpy },
+        { name: "Pandas", icon: SiPandas },
       ],
     },
   ];
 
   return (
-    <section className="py-20 px-6 relative overflow-hidden">
-      {/* Parallax decorative elements */}
+    <section className="py-40 px-6 relative overflow-hidden">
+      {/* Parallax decorations */}
       <div
         ref={parallaxRef}
         className="absolute inset-0 pointer-events-none opacity-10"
@@ -66,51 +60,39 @@ const Skills = () => {
       </div>
 
       <div ref={scrollRef} className="max-w-6xl mx-auto opacity-0">
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">
             Skills & Expertise
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A comprehensive toolkit for creating exceptional digital experiences
+            My toolkit of modern technologies and design skills
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 gap-8">
           {skillCategories.map((category, index) => (
             <Card
               key={index}
               className="glass-card border-glass-border hover-lift interactive-card p-6"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="space-y-6">
-                <div className="flex items-center space-x-3">
+              <h3 className="text-lg font-semibold text-foreground mb-6">
+                {category.title}
+              </h3>
+              <div className="flex flex-wrap gap-6 justify-center">
+                {category.skills.map((skill, skillIndex) => (
                   <div
-                    className={`p-3 rounded-lg bg-${category.color}/10 border border-${category.color}/20`}
+                    key={skillIndex}
+                    className={`flex flex-col items-center justify-center p-4 w-24 h-24 bg-${category.color}/20 rounded-xl border border-${category.color}/30 shadow-md hover:shadow-${category.color}/50 hover:scale-110 transition-all duration-300 ring-1 ring-${category.color}/40`}
                   >
-                    <category.icon
-                      className={`h-6 w-6 text-${category.color}`}
+                    <skill.icon
+                      className={`text-${category.color} w-10 h-10 mb-2 animate-bounce-slow`}
                     />
+                    <span className="text-sm font-medium text-foreground text-center">
+                      {skill.name}
+                    </span>
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground">
-                    {category.title}
-                  </h3>
-                </div>
-
-                <div className="space-y-4">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex} className="space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium text-foreground">
-                          {skill.name}
-                        </span>
-                        <span className="text-xs text-muted-foreground">
-                          {skill.level}%
-                        </span>
-                      </div>
-                      <Progress value={skill.level} className="h-2" />
-                    </div>
-                  ))}
-                </div>
+                ))}
               </div>
             </Card>
           ))}

@@ -5,6 +5,7 @@ import { Users } from "lucide-react";
 import Neeschal from '../assets/Profile.jpg'
 import Ashraya from '../assets/ashraya.jpg'
 import Sushant from '../assets/Sushant.jpg'
+import Aashish from '../assets/aashish.jpg'
 
 const Team = () => {
   const teamMembers = [
@@ -30,9 +31,9 @@ const Team = () => {
       github: "#"
     },
     {
-      name: "Member 4",
-      role: "AI Specialist",
-      image: "/team/member4.jpg",
+      name: "Aashish Ghimire",
+      role: "Graphics Designer",
+      image: Aashish,
       linkedin: "#",
       github: "#"
     }

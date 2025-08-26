@@ -5,6 +5,7 @@ import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import Team from "@/components/MyTeam";
+import Education from "@/components/Education";
 
 const Index = () => {
   return (
@@ -16,6 +17,9 @@ const Index = () => {
         </section>
         <section id="about">
           <About />
+        </section>
+        <section id="education">
+          <Education />
         </section>
         <section id="skills">
           <Skills />
