@@ -10,58 +10,61 @@ const Skills = () => {
   const skillCategories = [
     {
       icon: Palette,
-      title: "Design",
+      title: "UI/UX Design",
       color: "neon-blue",
       skills: [
-        { name: "UI/UX Design", level: 95 },
-        { name: "Prototyping", level: 90 },
-        { name: "Design Systems", level: 88 },
-        { name: "Wireframing", level: 92 }
-      ]
+        { name: "UI/UX Design", level: 80 },
+        { name: "Prototyping", level: 73 },
+        { name: "Wireframing", level: 71 },
+        { name: "Figma", level: 95 },
+      ],
     },
     {
       icon: Code,
-      title: "Tools",
+      title: "Frontend Development",
       color: "neon-purple",
       skills: [
-        { name: "Figma", level: 95 },
-        { name: "Adobe Creative Suite", level: 85 },
-        { name: "Sketch", level: 80 },
-        { name: "Framer", level: 75 }
-      ]
+        { name: "React Native", level: 58 },
+        { name: "React JS", level: 58 },
+        { name: "HTML/CSS", level: 37 },
+      ],
     },
     {
       icon: Users,
-      title: "Research",
+      title: "Python and Backend",
       color: "neon-cyan",
       skills: [
-        { name: "User Research", level: 88 },
-        { name: "Usability Testing", level: 85 },
-        { name: "Analytics", level: 80 },
-        { name: "A/B Testing", level: 78 }
-      ]
+        { name: "FastAPI (basic)", level: 51 },
+        { name: "Analytics & Testing", level: 13 },
+      ],
     },
     {
       icon: Zap,
-      title: "Development",
+      title: "AI Stuffs",
       color: "neon-pink",
       skills: [
-        { name: "HTML/CSS", level: 85 },
-        { name: "React", level: 75 },
-        { name: "JavaScript", level: 70 },
-        { name: "Responsive Design", level: 90 }
-      ]
-    }
+        { name: "Python", level: 70 },
+        { name: "NumPy", level: 30 },
+        { name: "Pandas", level: 5 },
+        { name: "Generative AI", level: 10 },
+      ],
+    },
   ];
 
   return (
     <section className="py-20 px-6 relative overflow-hidden">
       {/* Parallax decorative elements */}
-      <div ref={parallaxRef} className="absolute inset-0 pointer-events-none opacity-10">
+      <div
+        ref={parallaxRef}
+        className="absolute inset-0 pointer-events-none opacity-10"
+      >
         <div className="absolute top-20 left-20 w-40 h-40 border border-neon-blue/30 rounded-full animate-float" />
-        <div className="absolute bottom-40 right-20 w-28 h-28 border border-neon-purple/30 rounded-lg rotate-12 animate-float" style={{ animationDelay: '3s' }} />
+        <div
+          className="absolute bottom-40 right-20 w-28 h-28 border border-neon-purple/30 rounded-lg rotate-12 animate-float"
+          style={{ animationDelay: "3s" }}
+        />
       </div>
-      
+
       <div ref={scrollRef} className="max-w-6xl mx-auto opacity-0">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">
@@ -71,24 +74,28 @@ const Skills = () => {
             A comprehensive toolkit for creating exceptional digital experiences
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillCategories.map((category, index) => (
-            <Card 
-              key={index} 
+            <Card
+              key={index}
               className="glass-card border-glass-border hover-lift interactive-card p-6"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="space-y-6">
                 <div className="flex items-center space-x-3">
-                  <div className={`p-3 rounded-lg bg-${category.color}/10 border border-${category.color}/20`}>
-                    <category.icon className={`h-6 w-6 text-${category.color}`} />
+                  <div
+                    className={`p-3 rounded-lg bg-${category.color}/10 border border-${category.color}/20`}
+                  >
+                    <category.icon
+                      className={`h-6 w-6 text-${category.color}`}
+                    />
                   </div>
                   <h3 className="text-lg font-semibold text-foreground">
                     {category.title}
                   </h3>
                 </div>
-                
+
                 <div className="space-y-4">
                   {category.skills.map((skill, skillIndex) => (
                     <div key={skillIndex} className="space-y-2">
@@ -100,10 +107,7 @@ const Skills = () => {
                           {skill.level}%
                         </span>
                       </div>
-                      <Progress 
-                        value={skill.level} 
-                        className="h-2"
-                      />
+                      <Progress value={skill.level} className="h-2" />
                     </div>
                   ))}
                 </div>

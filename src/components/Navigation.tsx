@@ -10,6 +10,7 @@ const Navigation = () => {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
+    { name: "Team", href: "#skills" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" }
   ];
@@ -35,20 +36,20 @@ const Navigation = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'glass-card border-b border-glass-border backdrop-blur-lg' : ''
     }`}>
-      <div className="max-w-6xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-between gap-8">
+      <div className="max-w-7xl mx-auto px-[-15] py-4">
+        <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-2xl font-bold text-gradient ">
+          <div className="text-xl font-bold text-gradient font-dancing">
             Nees...
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-10">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-muted-foreground hover:text-primary transition-colors relative group"
+                className="text-muted-foreground hover:text-primary transition-colors relative group font-poppins"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
@@ -56,7 +57,7 @@ const Navigation = () => {
             ))}
             <Button 
               size="sm" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground glow-primary"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground glow-primary font-poppins"
             >
               Hire Me
             </Button>

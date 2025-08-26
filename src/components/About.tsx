@@ -39,7 +39,7 @@ const About = () => {
             About Me
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Passionate designer with 5+ years of experience creating digital experiences 
+            Passionate designer with 1+ years of experience creating digital experiences 
             that users love and businesses value.
           </p>
         </div>
