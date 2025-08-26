@@ -31,7 +31,7 @@ const Hero = () => {
         <div className="space-y-8 animate-fade-in">
           <div className="space-y-4">
             <h1 className="text-6xl md:text-8xl font-bold text-gradient mb-6 animate-scale-in">
-             NISCHAL POKHAREL
+             NEES C HAL
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-slide-in-left">
               Crafting digital experiences that blend creativity with functionality. 
