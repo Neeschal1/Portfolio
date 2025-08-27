@@ -80,7 +80,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-20 px-6 relative overflow-hidden">
+    <section className="py-20 px-6 relative overflow-hidden font-poppins">
       {/* Parallax decorations */}
       <div
         ref={parallaxRef}
@@ -95,30 +95,30 @@ const Contact = () => {
 
       <div ref={scrollRef} className="max-w-6xl mx-auto opacity-0">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6 font-poppins">
             Let's Create Together
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-poppins">
             Ready to bring your next project to life? Let's discuss how we can
             create something amazing together.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-12 font-poppins">
           {/* Contact form */}
           <Card className="glass-card border-glass-border interactive-card p-8 animate-slide-in-left">
             <div className="space-y-6">
               <div>
-                <h3 className="text-2xl font-bold text-foreground mb-2">
+                <h3 className="text-2xl font-bold text-foreground mb-2 font-poppins">
                   Send a Message
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground font-poppins">
                   I'll get back to you within 24 hours.
                 </p>
               </div>
 
               <form className="space-y-4" onSubmit={handleSubmit}>
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid md:grid-cols-2 gap-4 font-poppins">
                   <Input
                     name="name"
                     placeholder="Your Name"
@@ -137,7 +137,7 @@ const Contact = () => {
                   <Input
                     name="subject"
                     placeholder="Subject"
-                    className="bg-background/50 border-border focus:border-primary"
+                    className="bg-background/50 border-border focus:border-primary font-poppins"
                     required
                   />
                 </div>
@@ -146,16 +146,16 @@ const Contact = () => {
                     name="message"
                     placeholder="Your Message"
                     rows={6}
-                    className="bg-background/50 border-border focus:border-primary resize-none"
+                    className="bg-background/50 border-border focus:border-primary resize-none font-poppins"
                     required
                   />
                 </div>
                 <Button
                   size="lg"
                   disabled={loading}
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground glow-primary magnetic-btn"
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground glow-primary magnetic-btn font-poppins"
                 >
-                  <Send className="mr-2 h-5 w-5" />
+                  <Send className="mr-2 h-5 w-5 font-poppins" />
                   {loading ? "Sending..." : "Send Message"}
                 </Button>
               </form>
@@ -163,26 +163,26 @@ const Contact = () => {
           </Card>
 
           {/* Contact info & social links */}
-          <div className="space-y-8 animate-slide-in-right">
+          <div className="space-y-8 animate-slide-in-right font-poppins">
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6">
+              <h3 className="text-2xl font-bold text-foreground mb-6 font-poppins">
                 Get In Touch
               </h3>
-              <div className="space-y-4">
+              <div className="space-y-4 font-poppins">
                 {contactInfo.map((item, index) => (
                   <a
                     key={index}
                     href={item.href}
-                    className="flex items-center space-x-4 p-4 rounded-lg glass-card border border-glass-border hover-lift group"
+                    className="flex items-center space-x-4 p-4 rounded-lg glass-card border border-glass-border hover-lift group font-poppins"
                   >
-                    <div className="p-2 rounded-lg bg-primary/10 border border-primary/20 group-hover:bg-primary/20 transition-colors">
-                      <item.icon className="h-5 w-5 text-primary" />
+                    <div className="p-2 rounded-lg bg-primary/10 border border-primary/20 group-hover:bg-primary/20 transition-colors font-poppins">
+                      <item.icon className="h-5 w-5 text-primary font-poppins" />
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-sm text-muted-foreground font-poppins">
                         {item.label}
                       </p>
-                      <p className="font-medium text-foreground group-hover:text-primary transition-colors">
+                      <p className="font-medium text-foreground group-hover:text-primary transition-colors font-poppins">
                         {item.value}
                       </p>
                     </div>
@@ -193,7 +193,7 @@ const Contact = () => {
 
             {/* Social links */}
             <div>
-              <h4 className="text-lg font-semibold text-foreground mb-4">
+              <h4 className="text-lg font-semibold text-foreground mb-4 font-poppins">
                 Follow Me
               </h4>
               <div className="flex space-x-4">
@@ -216,17 +216,17 @@ const Contact = () => {
         <div className="mt-12">
           <Card className="glass-card border-glass-border p-6">
             <div className="space-y-4 text-center">
-              <h4 className="text-lg font-semibold text-foreground">
+              <h4 className="text-lg font-semibold text-foreground font-poppins">
                 Ready to Start Your Project?
               </h4>
-              <p className="text-muted-foreground text-sm">
+              <p className="text-muted-foreground text-sm font-poppins">
                 Whether you need a complete design overhaul or just want to
                 optimize your current interface, I'm here to help turn your
                 vision into reality.
               </p>
               <Button
                 size="sm"
-                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground glow-secondary"
+                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground glow-secondary font-poppins"
               >
                 Schedule a Call
               </Button>

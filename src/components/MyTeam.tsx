@@ -44,10 +44,10 @@ const Team = () => {
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6 font-poppins">
             Meet My Team
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-poppins">
             Talented professionals driving creativity, development, and innovation.
           </p>
         </div>
@@ -69,16 +69,16 @@ const Team = () => {
               </div>
 
               {/* Name & Role */}
-              <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+              <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors font-poppins">
                 {member.name}
               </h3>
-              <p className="text-sm text-muted-foreground mb-4">{member.role}</p>
+              <p className="text-sm text-muted-foreground mb-4 font-poppins">{member.role}</p>
 
               {/* Social buttons */}
               <div className="flex space-x-3">
                 <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                  <Button size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                    <Users className="mr-2 h-4 w-4" />
+                  <Button size="sm" className="font-poppins bg-primary hover:bg-primary/90 text-primary-foreground">
+                    <Users className="mr-2 h-4 w-4 font-poppins" />
                     LinkedIn
                   </Button>
                 </a>

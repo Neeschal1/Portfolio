@@ -35,10 +35,10 @@ const About = () => {
       
       <div ref={scrollRef} className="max-w-6xl mx-auto opacity-0">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6 font-poppins">
             About Me
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-poppins">
             Passionate designer with 1+ years of experience creating digital experiences 
             that users love and businesses value.
           </p>
@@ -47,10 +47,10 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="space-y-6 animate-slide-in-left">
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-foreground">
+              <h3 className="text-2xl font-bold text-foreground font-poppins">
                 Design Philosophy
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed font-poppins">
                 I believe great design is invisible - it guides users effortlessly toward their goals 
                 while creating moments of delight. My approach combines analytical thinking with 
                 creative problem-solving to craft interfaces that are both beautiful and functional.
@@ -72,7 +72,7 @@ const About = () => {
           
           <Card className="glass-card border-glass-border hover-lift interactive-card p-8 animate-slide-in-right">
             <div className="space-y-6">
-              <h4 className="text-xl font-semibold text-foreground mb-4">
+              <h4 className="text-xl font-semibold text-foreground mb-4 font-poppins">
                 Core Values
               </h4>
               {values.map((value, index) => (
@@ -81,7 +81,7 @@ const About = () => {
                     <value.icon className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h5 className="font-semibold text-foreground mb-1">
+                    <h5 className="font-semibold text-foreground mb-1 font-poppins">
                       {value.title}
                     </h5>
                     <p className="text-sm text-muted-foreground">

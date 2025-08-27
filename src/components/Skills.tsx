@@ -60,10 +60,10 @@ const Skills = () => {
 
       <div ref={scrollRef} className="max-w-6xl mx-auto opacity-0">
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6 font-poppins">
             Skills & Expertise
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-poppins">
             My toolkit of modern technologies and design skills
           </p>
         </div>
@@ -72,22 +72,22 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <Card
               key={index}
-              className="glass-card border-glass-border hover-lift interactive-card p-6"
+              className="glass-card border-glass-border hover-lift interactive-card p-7 font-poppins"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <h3 className="text-lg font-semibold text-foreground mb-6">
+              <h3 className="text-lg font-semibold text-foreground mb-6 font-poppins">
                 {category.title}
               </h3>
               <div className="flex flex-wrap gap-6 justify-center">
                 {category.skills.map((skill, skillIndex) => (
                   <div
                     key={skillIndex}
-                    className={`flex flex-col items-center justify-center p-4 w-24 h-24 bg-${category.color}/20 rounded-xl border border-${category.color}/30 shadow-md hover:shadow-${category.color}/50 hover:scale-110 transition-all duration-300 ring-1 ring-${category.color}/40`}
+                    className={`flex flex-col items-center justify-center p-4 w-24 font-poppins h-24 bg-${category.color}/20 rounded-xl border border-${category.color}/30 shadow-md hover:shadow-${category.color}/50 hover:scale-110 transition-all duration-300 ring-1 ring-${category.color}/40`}
                   >
                     <skill.icon
-                      className={`text-${category.color} w-10 h-10 mb-2 animate-bounce-slow`}
+                      className={`text-${category.color} w-10 h-10 mb-2 animate-bounce-slow font-poppins`}
                     />
-                    <span className="text-sm font-medium text-foreground text-center">
+                    <span className="text-sm font-medium text-foreground text-center font-poppins">
                       {skill.name}
                     </span>
                   </div>

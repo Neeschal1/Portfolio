@@ -50,10 +50,10 @@ const Education = () => {
 
       <div ref={scrollRef} className="max-w-6xl mx-auto opacity-0">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6 font-poppins">
             Education
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-poppins">
             My academic journey and professional learning experiences
           </p>
         </div>
@@ -67,10 +67,10 @@ const Education = () => {
               onClick={() => toggleOpen(index)}
             >
               <div className="flex-1">
-                <h3 className="text-lg font-semibold text-foreground">
+                <h3 className="text-lg font-semibold text-foreground font-poppins">
                   {edu.institution}
                 </h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground font-poppins">
                   {edu.degree} | {edu.year}
                 </p>
                 <div
@@ -78,7 +78,7 @@ const Education = () => {
                     openIndex === index ? "max-h-16" : "max-h-0"
                   }`}
                 >
-                  <p className="text-sm text-muted-foreground">{edu.details}</p>
+                  <p className="text-sm text-muted-foreground font-poppins">{edu.details}</p>
                 </div>
               </div>
               <div className="ml-4 text-primary flex-shrink-0">

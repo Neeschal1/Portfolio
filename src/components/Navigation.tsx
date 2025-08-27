@@ -64,7 +64,7 @@ const Navigation = ({ onHireMeClick }: NavigationProps) => {
     >
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="text-xl font-bold text-gradient font-dancing">Nees...</div>
+        <div className="text-2xl font-bold text-gradient font-dancing">Nees...</div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-10">
@@ -78,13 +78,13 @@ const Navigation = ({ onHireMeClick }: NavigationProps) => {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
             </button>
           ))}
-          <Button
+          {/* <Button
             size="sm"
             className="bg-primary hover:bg-primary/90 text-primary-foreground glow-primary font-poppins"
             onClick={onHireMeClick}
           >
             Hire Me
-          </Button>
+          </Button> */}
         </div>
 
         {/* Mobile menu button */}
@@ -105,7 +105,7 @@ const Navigation = ({ onHireMeClick }: NavigationProps) => {
             <button
               key={item.name}
               onClick={() => scrollToSection(item.href)}
-              className="block w-full text-left text-muted-foreground hover:text-primary transition-colors py-2"
+              className="block w-full text-left text-muted-foreground hover:text-primary transition-colors py-2 font-poppins"
             >
               {item.name}
             </button>

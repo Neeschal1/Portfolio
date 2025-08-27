@@ -142,10 +142,10 @@ const Projects = () => {
 
       <div ref={scrollRef} className="max-w-6xl mx-auto opacity-0">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-6 font-poppins">
             Featured Projects
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-poppins">
             Showcasing design solutions that solve real problems and create
             meaningful impact
           </p>
@@ -169,10 +169,10 @@ const Projects = () => {
 
                 <div className="flex justify-between items-start">
                   <div className="space-y-2">
-                    <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                    <h3 className="text-xl font-bold text-foreground font-poppins group-hover:text-primary transition-colors">
                       {project.title}
                     </h3>
-                    <div className="flex items-center space-x-4 text-sm text-muted-foreground">
+                    <div className="font-poppins flex items-center space-x-4 text-sm text-muted-foreground">
                       <span>{project.type}</span>
                       <span>•</span>
                       <span>{project.year}</span>
@@ -180,16 +180,16 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed font-poppins">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 font-poppins">
                   {project.tags.map((tag, tagIndex) => (
                     <Badge
                       key={tagIndex}
                       variant="outline"
-                      className="border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground"
+                      className="border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground font-poppins"
                     >
                       {tag}
                     </Badge>
@@ -198,7 +198,7 @@ const Projects = () => {
               </div>
 
               {/* Overlay Buttons */}
-              <div className="absolute inset-0 bg-black/40 opacity-0 flex flex-col items-center justify-center gap-3 transition-opacity duration-300 group-hover:opacity-100">
+              <div className="absolute inset-0 bg-black/40 opacity-0 flex flex-col items-center justify-center gap-3 transition-opacity duration-300 group-hover:opacity-100 font-poppins">
                 {project.link ? (
                   <a
                     href={project.link}
@@ -207,14 +207,14 @@ const Projects = () => {
                   >
                     <Button
                       size="sm"
-                      className="bg-primary hover:bg-primary/90 text-primary-foreground magnetic-btn"
+                      className="bg-primary hover:bg-primary/90 text-primary-foreground magnetic-btn font-poppins"
                     >
-                      <ExternalLink className="mr-2 h-4 w-4" />
+                      <ExternalLink className="mr-2 h-4 w-4 font-poppins" />
                       Visit
                     </Button>
                   </a>
                 ) : (
-                  <span className="text-white text-sm font-medium">
+                  <span className="text-white text-sm font-medium font-poppins">
                     Currently in Development Stage.
                   </span>
                 )}
@@ -225,14 +225,14 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 font-poppins">
           <Button
             size="lg"
             variant="outline"
             className={`glass-card ${
               showAll
-                ? "border-neon-pink text-neon-pink hover:bg-neon-pink hover:text-background"
-                : "border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-background"
+                ? "border-neon-pink text-neon-pink hover:bg-neon-pink hover:text-background font-poppins"
+                : "border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-background font-poppins"
             }`}
             onClick={() => setShowAll(!showAll)}
           >
