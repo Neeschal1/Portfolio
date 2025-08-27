@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navigation from "../components/Navigation";
 import Hero from "../components/Hero";
 import About from "../components/About";
@@ -8,12 +9,17 @@ import Team from "@/components/MyTeam";
 import Education from "@/components/Education";
 
 const Index = () => {
+  const [showEmailCard, setShowEmailCard] = useState(false);
+
   return (
     <div className="min-h-screen">
-      <Navigation />
+      {/* Pass the function to trigger email card */}
+      <Navigation onHireMeClick={() => setShowEmailCard(true)} />
+
       <main>
         <section id="home">
-          <Hero />
+          {/* Pass state and setter to Hero */}
+          <Hero showEmailCard={showEmailCard} setShowEmailCard={setShowEmailCard} />
         </section>
         <section id="about">
           <About />
