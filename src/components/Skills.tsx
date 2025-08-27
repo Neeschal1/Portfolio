@@ -22,9 +22,7 @@ const Skills = () => {
       title: "Frontend Development",
       color: "neon-purple",
       skills: [
-        { name: "React Native", icon: FaReact },
-        { name: "React JS", icon: FaReact },
-        { name: "Tailwind CSS", icon: SiTailwindcss },
+        { name: "ReactNative", icon: FaReact },
       ],
     },
     {

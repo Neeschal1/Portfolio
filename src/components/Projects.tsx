@@ -4,99 +4,140 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
 import { useScrollAnimation, useParallax } from "../hooks/use-Parallax";
 
-import Ecommerce from '../assets/ecommerce.jpg'
-import Fintech from '../assets/fintech.jpg'
+import Ecommerce from "../assets/ecommerce.jpg";
+import Fintech from "../assets/fintech.jpg";
+import Bihebari from "../assets/bihebari.jpg";
+import Chalau from "../assets/Chalau.png";
+import Bihebariweb from "../assets/Bihebari Web.png";
+import Sadacreatives from "../assets/Sadacreatives.png";
+import Gandakitravels from "../assets/Gandakitravels.png";
+import Urban from "../assets/Urban.png";
+import Kishancare from "../assets/Kishancare.png";
+import Anime from "../assets/Anime.png";
+import Soham from "../assets/Soham.jpg";
+import Sohamweb from "../assets/Sohamweb.jpg";
+
 import { useState } from "react";
+
+interface Project {
+  title: string;
+  description: string;
+  tags: string[];
+  year: string;
+  type: string;
+  image: string;
+  link?: string; // Optional link field
+}
 
 const Projects = () => {
   const scrollRef = useScrollAnimation();
   const parallaxRef = useParallax(0.05);
 
-  const projects = [
+  const projects: Project[] = [
     {
-      title: "FinTech Dashboard",
-      description: "Complete redesign of a financial analytics platform with focus on data visualization and user workflow optimization.",
-      tags: ["UI/UX", "Dashboard", "Data Viz", "B2B"],
-      year: "2024",
+      title: "Soham",
+      description:
+        "Designing and developing a Meditation app with a calming user experience and guided sessions.",
+      tags: ["Figma", "React Native", "Meditation", "UX", "Android", "iOS"],
+      year: "2025",
+      type: "Mobile Application",
+      image: Soham,
+    },
+    {
+      title: "Soham Web",
+      description:
+        "Upcoming Project: Soham web page, that gives a brief introduction about Soham Mobile Application.",
+      tags: ["UI/UX", "Figma", "React JS"],
+      year: "_____",
+      type: "Web Page",
+      image: Sohamweb,
+    },
+    {
+      title: "Bihebari",
+      description:
+        "Designed a Bihebari app for meaningful matchmaking with an intuitive user experience.",
+      tags: ["UI/UX", "Prototype", "Mobile", "iOS/Android", "Figma"],
+      year: "2025",
+      type: "Mobile Application Design",
+      image: Bihebari,
+    },
+    {
+      title: "Bihebari Web",
+      description:
+        "Bihebari web page, that gives a brief introduction about Bihebari Mobile Application",
+      tags: ["UI/UX", "Figma", "React JS"],
+      year: "2025",
       type: "Web App",
-      image: Fintech
+      image: Bihebariweb,
+      link: "https://bihebari.netlify.app/",
     },
     {
-      title: "E-commerce Mobile App",
-      description: "Native mobile app design for sustainable fashion brand with seamless shopping experience and AR try-on features.",
-      tags: ["Mobile", "E-commerce", "AR", "iOS/Android"],
+      title: "Sada Creatives",
+      description:
+        "Designed our company’s landing page with a focus on clean layout, engaging visuals, and smooth user experience.",
+      tags: ["UI/UX", "Figma", "Next JS", "Laravel"],
+      year: "2053",
+      type: "Mobile App",
+      image: Sadacreatives,
+      link: "https://sadacreatives.com.au/",
+    },
+    {
+      title: "Gandaki Travels",
+      description:
+        "Designed a travel booking website with a user-friendly layout and engaging visuals for seamless booking experience.",
+      tags: ["Travel", "UI/UX", "Figma"],
+      year: "2025",
+      type: "Web Portal",
+      image: Gandakitravels,
+    },
+    {
+      title: "Urban Photo Studio",
+      description:
+        "Designed a photo studio website for booking photography and videography sessions for special occasions.",
+      tags: ["UI/UX", "Figma", "Photo", "Video"],
       year: "2023",
       type: "Mobile App",
-      image: Ecommerce
+      image: Urban,
     },
     {
-      title: "FinTech Dashboard 2",
-      description: "Another fintech project showcasing UI improvements and analytics dashboards.",
-      tags: ["UI/UX", "Finance", "Analytics"],
+      title: "Chalau",
+      description:
+        "Contributed to the Chalau app design, enabling users to easily browse and rent vehicles with a smooth, user-friendly experience.",
+      tags: ["UI/UX", "Mobile", "E-commerce", "AR", "iOS/Android"],
+      year: "2025",
+      type: "Mobile Application Design",
+      image: Chalau,
+      link: "https://play.google.com/store/apps/dev?id=8621787848835121707&amp%3Bhl=es_US"
+    },
+    {
+      title: "Kishancare",
+      description:
+      "Contributed to Kishancare web design, major focused for providing easeness to the local farmers.",
+      tags: ["Healthcare", "Portal", "UX"],
       year: "2024",
-      type: "Web App",
-      image: Fintech
-    },
-    {
-      title: "E-commerce Mobile App 2",
-      description: "Second e-commerce mobile app design with AR try-on feature and smooth UX.",
-      tags: ["Mobile", "E-commerce", "AR"],
-      year: "2023",
-      type: "Mobile App",
-      image: Ecommerce
-    },
-    {
-      title: "Healthcare Portal",
-      description: "Patient portal redesign focusing on accessibility, clear information hierarchy, and appointment scheduling.",
-      tags: ["Healthcare", "Portal", "UX"],
-      year: "2022",
       type: "Web Portal",
-      image: Fintech
-    },
-    {
-      title: "E-commerce Mobile App 2",
-      description: "Second e-commerce mobile app design with AR try-on feature and smooth UX.",
-      tags: ["Mobile", "E-commerce", "AR"],
-      year: "2023",
-      type: "Mobile App",
-      image: Ecommerce
-    },
-    {
-      title: "Healthcare Portal",
-      description: "Patient portal redesign focusing on accessibility, clear information hierarchy, and appointment scheduling.",
-      tags: ["Healthcare", "Portal", "UX"],
-      year: "2022",
-      type: "Web Portal",
-      image: Fintech
-    },
-    {
-      title: "E-commerce Mobile App 2",
-      description: "Second e-commerce mobile app design with AR try-on feature and smooth UX.",
-      tags: ["Mobile", "E-commerce", "AR"],
-      year: "2023",
-      type: "Mobile App",
-      image: Ecommerce
-    },
-    {
-      title: "Healthcare Portal",
-      description: "Patient portal redesign focusing on accessibility, clear information hierarchy, and appointment scheduling.",
-      tags: ["Healthcare", "Portal", "UX"],
-      year: "2022",
-      type: "Web Portal",
-      image: Fintech
+      image: Kishancare,
+      link: "https://kishancare.com/"
     },
   ];
 
   const [showAll, setShowAll] = useState(false);
-
-  // Show only first 4 projects if showAll is false
   const displayedProjects = showAll ? projects : projects.slice(0, 4);
 
   return (
     <section className="py-20 px-6 relative overflow-hidden">
-      <div ref={parallaxRef} className="absolute inset-0 pointer-events-none opacity-15">
-        <div className="absolute top-32 right-32 w-36 h-36 border border-neon-cyan/20 rounded-full animate-float" style={{ animationDelay: '1s' }} />
-        <div className="absolute bottom-32 left-32 w-20 h-20 border border-neon-pink/30 rounded-lg rotate-45 animate-float" style={{ animationDelay: '4s' }} />
+      <div
+        ref={parallaxRef}
+        className="absolute inset-0 pointer-events-none opacity-15"
+      >
+        <div
+          className="absolute top-32 right-32 w-36 h-36 border border-neon-cyan/20 rounded-full animate-float"
+          style={{ animationDelay: "1s" }}
+        />
+        <div
+          className="absolute bottom-32 left-32 w-20 h-20 border border-neon-pink/30 rounded-lg rotate-45 animate-float"
+          style={{ animationDelay: "4s" }}
+        />
       </div>
 
       <div ref={scrollRef} className="max-w-6xl mx-auto opacity-0">
@@ -105,7 +146,8 @@ const Projects = () => {
             Featured Projects
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Showcasing design solutions that solve real problems and create meaningful impact
+            Showcasing design solutions that solve real problems and create
+            meaningful impact
           </p>
         </div>
 
@@ -117,7 +159,6 @@ const Projects = () => {
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               <div className="space-y-6">
-                {/* Project image */}
                 {project.image && (
                   <img
                     src={project.image}
@@ -126,7 +167,6 @@ const Projects = () => {
                   />
                 )}
 
-                {/* Project header */}
                 <div className="flex justify-between items-start">
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
@@ -140,12 +180,10 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {/* Project description */}
                 <p className="text-muted-foreground leading-relaxed">
                   {project.description}
                 </p>
 
-                {/* Tags */}
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, tagIndex) => (
                     <Badge
@@ -161,21 +199,27 @@ const Projects = () => {
 
               {/* Overlay Buttons */}
               <div className="absolute inset-0 bg-black/40 opacity-0 flex flex-col items-center justify-center gap-3 transition-opacity duration-300 group-hover:opacity-100">
-                <Button
-                  size="sm"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground magnetic-btn"
-                >
-                  <ExternalLink className="mr-2 h-4 w-4" />
-                  View Case Study
-                </Button>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="border-muted text-muted-foreground hover:bg-muted hover:text-foreground"
-                >
-                  <Github className="mr-2 h-4 w-4" />
-                  Prototype
-                </Button>
+                {project.link ? (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button
+                      size="sm"
+                      className="bg-primary hover:bg-primary/90 text-primary-foreground magnetic-btn"
+                    >
+                      <ExternalLink className="mr-2 h-4 w-4" />
+                      Visit
+                    </Button>
+                  </a>
+                ) : (
+                  <span className="text-white text-sm font-medium">
+                    Currently in Development Stage.
+                  </span>
+                )}
+
+                
               </div>
             </Card>
           ))}
@@ -185,10 +229,14 @@ const Projects = () => {
           <Button
             size="lg"
             variant="outline"
-            className={`glass-card ${showAll ? 'border-neon-pink text-neon-pink hover:bg-neon-pink hover:text-background' : 'border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-background'}`}
+            className={`glass-card ${
+              showAll
+                ? "border-neon-pink text-neon-pink hover:bg-neon-pink hover:text-background"
+                : "border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-background"
+            }`}
             onClick={() => setShowAll(!showAll)}
           >
-            {showAll ? 'Show Less' : 'View All Projects'}
+            {showAll ? "Show Less" : "View All Projects"}
           </Button>
         </div>
       </div>

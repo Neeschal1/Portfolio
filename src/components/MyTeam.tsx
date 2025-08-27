@@ -13,21 +13,21 @@ const Team = () => {
       name: "Nischal Pokhrel",
       role: "Beginner Product Developer",
       image: Neeschal,
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/nischal-pokhrel-6543632b7/",
       github: "#"
     },
     {
       name: "Ashraya Bashyal",
       role: "React Native Developer",
       image: Ashraya,
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/ashraya-bashyal-60119735b/",
       github: "#"
     },
     {
       name: "Sushant Pandey",
       role: "Backend Developer",
       image: Sushant,
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/sushant-pandey-5b2b02320/",
       github: "#"
     },
     {
@@ -82,7 +82,7 @@ const Team = () => {
                     LinkedIn
                   </Button>
                 </a>
-                <a href={member.github} target="_blank" rel="noopener noreferrer">
+                {/* <a href={member.github} target="_blank" rel="noopener noreferrer">
                   <Button
                     variant="outline"
                     size="sm"
@@ -91,7 +91,7 @@ const Team = () => {
                     <Users className="mr-2 h-4 w-4" />
                     GitHub
                   </Button>
-                </a>
+                </a> */}
               </div>
             </Card>
           ))}
