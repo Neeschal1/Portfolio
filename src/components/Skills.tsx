@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { useScrollAnimation, useParallax } from "../hooks/use-Parallax";
-import { FaFigma, FaReact, FaPython } from "react-icons/fa";
+import { FaFigma, FaReact, FaPython, FaJava, FaJs } from "react-icons/fa";
 import { SiNumpy, SiPandas, SiFastapi, SiTailwindcss } from "react-icons/si";
 import { MdDesignServices } from "react-icons/md";
 
@@ -11,7 +11,7 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "UI/UX Design",
-      color: "neon-blue",
+      color: "neon-pink",
       skills: [
         { name: "Figma", icon: FaFigma },
         { name: "Wireframing", icon: MdDesignServices },
@@ -19,18 +19,19 @@ const Skills = () => {
       ],
     },
     {
-      title: "Frontend Development",
-      color: "neon-purple",
+      title: "Development",
+      color: "neon-cyan",
       skills: [
         { name: "ReactNative", icon: FaReact },
+        { name: "FastAPI", icon: SiFastapi },
       ],
     },
     {
-      title: "Python & Backend",
+      title: "Languages",
       color: "neon-cyan",
       skills: [
         { name: "Python", icon: FaPython },
-        { name: "FastAPI", icon: SiFastapi },
+        { name: "Javascript", icon: FaJs },
       ],
     },
     {
