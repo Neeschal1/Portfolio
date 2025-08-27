@@ -9,7 +9,7 @@ const Education = () => {
 
   const educationList = [
     {
-      institution: "Tribhuvan University",
+      institution: "Butwal Multiple Campus",
       degree: "BSc CSIT",
       year: "2023 - Present",
       details: "Currently pursuing Bachelor of Science in Computer Science and Information Technology, focusing on software development, UI/UX design, and AI.",

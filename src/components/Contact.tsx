@@ -226,7 +226,13 @@ const Contact = () => {
               </p>
               <Button
                 size="sm"
-                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground glow-secondary font-poppins"
+                className="w-48 mx-auto bg-secondary text-secondary-foreground font-poppins glow-secondary transition-all duration-300 transform hover:scale-105 hover:bg-gradient-to-r hover:from-secondary/90 hover:to-primary/90 hover:shadow-xl hover:glow-secondary"
+                onClick={() =>
+                  window.open(
+                    "https://calendly.com/nischalpok52/30min",
+                    "_blank"
+                  )
+                }
               >
                 Schedule a Call
               </Button>
