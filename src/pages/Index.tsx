@@ -8,6 +8,7 @@ import Contact from "../components/Contact";
 import Team from "@/components/MyTeam";
 import Education from "@/components/Education";
 import "./Loader.css"; // Make sure this CSS has fade-out animation as discussed
+import Experience from "@/components/Experience";
 
 const Index = () => {
   const [showEmailCard, setShowEmailCard] = useState(false);
@@ -63,6 +64,10 @@ const Index = () => {
 
           <section id="skills">
             <Skills />
+          </section>
+
+          <section id="experience">
+            <Experience />
           </section>
 
           <section id="teams">

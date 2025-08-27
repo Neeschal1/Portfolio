@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import emailjs from "@emailjs/browser";
 import { useState, useEffect } from "react";
+import Resume from "./Resume.pdf";
 
 interface HeroProps {
   showEmailCard: boolean;
@@ -87,8 +88,9 @@ const Hero = ({ showEmailCard, setShowEmailCard }: HeroProps) => {
             Neeschal Pokharel
           </h1>
           <p className="text-xl md:text-1xl text-muted-foreground leading-relaxed animate-slide-in-left font-poppins text-left mt-2">
-            Crafting digital experiences that blend creativity with functionality.
-            Transforming ideas into intuitive, beautiful interfaces.
+            Crafting digital experiences that blend creativity with
+            functionality. Transforming ideas into intuitive, beautiful
+            interfaces.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
@@ -100,14 +102,16 @@ const Hero = ({ showEmailCard, setShowEmailCard }: HeroProps) => {
               <Mail className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
               Get In Touch
             </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-background glass-card hover-lift magnetic-btn"
-            >
-              <Download className="mr-2 h-5 w-5" />
-              Download Resume
-            </Button>
+            <a href={Resume} download="Neeschal_Pokharel_Resume.pdf">
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-background glass-card hover-lift magnetic-btn"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Download Resume
+              </Button>
+            </a>
           </div>
         </div>
 
@@ -118,7 +122,10 @@ const Hero = ({ showEmailCard, setShowEmailCard }: HeroProps) => {
       </div>
 
       {/* Floating shapes */}
-      <div ref={parallaxElements} className="absolute inset-0 pointer-events-none">
+      <div
+        ref={parallaxElements}
+        className="absolute inset-0 pointer-events-none"
+      >
         <div className="absolute top-20 left-10 w-20 h-20 border border-neon-blue/30 rounded-full animate-float glow-primary" />
         <div
           className="absolute top-40 right-20 w-16 h-16 border border-neon-purple/30 rounded-lg animate-float glow-secondary"
@@ -151,8 +158,12 @@ const Hero = ({ showEmailCard, setShowEmailCard }: HeroProps) => {
             </button>
 
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold text-foreground">Send a Message</h4>
-              <p className="text-muted-foreground text-sm">I'll get back to you within 24 hours.</p>
+              <h4 className="text-lg font-semibold text-foreground">
+                Send a Message
+              </h4>
+              <p className="text-muted-foreground text-sm">
+                I'll get back to you within 24 hours.
+              </p>
               <form className="space-y-4" onSubmit={handleSubmit}>
                 <Input
                   name="name"
