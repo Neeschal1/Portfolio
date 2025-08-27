@@ -1,8 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { useScrollAnimation, useParallax } from "../hooks/use-Parallax";
-import { FaFigma, FaReact, FaPython, FaJava, FaJs } from "react-icons/fa";
-import { SiNumpy, SiPandas, SiFastapi, SiTailwindcss } from "react-icons/si";
-import { MdDesignServices } from "react-icons/md";
+import { FaFigma, FaReact, FaPython, FaJava, FaJs, FaPhoenixFramework } from "react-icons/fa";
+import { SiNumpy, SiPandas, SiFastapi, SiTailwindcss, SiPython } from "react-icons/si";
+import { MdBrush, MdDesignServices, MdFormatPaint } from "react-icons/md";
 
 const Skills = () => {
   const scrollRef = useScrollAnimation();
@@ -14,7 +14,8 @@ const Skills = () => {
       color: "neon-pink",
       skills: [
         { name: "Figma", icon: FaFigma },
-        { name: "Wireframing", icon: MdDesignServices },
+        { name: "Canva", icon: MdBrush },
+        { name: "Wireframing", icon: FaPhoenixFramework  },
         { name: "Prototyping", icon: MdDesignServices },
       ],
     },
@@ -22,26 +23,28 @@ const Skills = () => {
       title: "Development",
       color: "neon-cyan",
       skills: [
+        { name: "Python", icon: SiPython },
+        { name: "Javascript", icon: FaJs },
         { name: "ReactNative", icon: FaReact },
         { name: "FastAPI", icon: SiFastapi },
       ],
     },
-    {
-      title: "Languages",
-      color: "neon-cyan",
-      skills: [
-        { name: "Python", icon: FaPython },
-        { name: "Javascript", icon: FaJs },
-      ],
-    },
-    {
-      title: "AI & Data",
-      color: "neon-pink",
-      skills: [
-        { name: "NumPy", icon: SiNumpy },
-        { name: "Pandas", icon: SiPandas },
-      ],
-    },
+    // {
+    //   title: "Languages",
+    //   color: "neon-cyan",
+    //   skills: [
+    //     { name: "Python", icon: FaPython },
+    //     { name: "Javascript", icon: FaJs },
+    //   ],
+    // },
+    // {
+    //   title: "AI & Data",
+    //   color: "neon-pink",
+    //   skills: [
+    //     { name: "NumPy", icon: SiNumpy },
+    //     { name: "Pandas", icon: SiPandas },
+    //   ],
+    // },
   ];
 
   return (
@@ -64,7 +67,7 @@ const Skills = () => {
             Skills & Expertise
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-poppins">
-            My toolkit of modern technologies and design skills
+            My toolkit of modern technologies that I am familiar to
           </p>
         </div>
 
