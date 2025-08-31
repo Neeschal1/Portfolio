@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import emailjs from "@emailjs/browser";
 import { useState, useEffect } from "react";
-import Resume from "./Resume.pdf";
+import Resume from './Resume.pdf'
 
 interface HeroProps {
   showEmailCard: boolean;
@@ -103,15 +103,15 @@ const Hero = ({ showEmailCard, setShowEmailCard }: HeroProps) => {
               Get In Touch
             </Button>
             <a href={Resume} download="Neeschal_Pokharel_Resume.pdf">
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-background glass-card hover-lift magnetic-btn"
-              >
-                <Download className="mr-2 h-5 w-5" />
-                Download Resume
-              </Button>
-            </a>
+  <Button
+    variant="outline"
+    size="lg"
+    className="border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-background glass-card hover-lift magnetic-btn"
+  >
+    <Download className="mr-2 h-5 w-5" />
+    Download Resume
+  </Button>
+</a>
           </div>
         </div>
 

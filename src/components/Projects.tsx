@@ -15,6 +15,7 @@ import Urban from "../assets/Urban.png";
 import Kishancare from "../assets/Kishancare.png";
 import Anime from "../assets/Anime.png";
 import Soham from "../assets/Soham.jpg";
+import Chatty from "../assets/chatty.jpg";
 import Sohamweb from "../assets/Sohamweb.jpg";
 
 import { useState } from "react";
@@ -42,6 +43,16 @@ const Projects = () => {
       year: "2025",
       type: "Mobile Application",
       image: Soham,
+    },
+    {
+      title: "Chatty",
+      description:
+        "A simple chatbot app made using python and streamlit for developing it's user interface.",
+      tags: ["Chatty", "Chatbot", "Python", "Streamlit", "Google_Gemini"],
+      year: "2025",
+      type: "Mobile Application",
+      image: Chatty,
+      link: "https://neesschat.streamlit.app/",
     },
     {
       title: "Soham Web",
@@ -107,17 +118,17 @@ const Projects = () => {
       year: "2025",
       type: "Mobile Application Design",
       image: Chalau,
-      link: "https://play.google.com/store/apps/dev?id=8621787848835121707&amp%3Bhl=es_US"
+      link: "https://play.google.com/store/apps/dev?id=8621787848835121707&amp%3Bhl=es_US",
     },
     {
       title: "Kishancare",
       description:
-      "Contributed to Kishancare web design, major focused for providing easeness to the local farmers.",
+        "Contributed to Kishancare web design, major focused for providing easeness to the local farmers.",
       tags: ["Healthcare", "Portal", "UX"],
       year: "2024",
       type: "Web Portal",
       image: Kishancare,
-      link: "https://kishancare.com/"
+      link: "https://kishancare.com/",
     },
   ];
 
@@ -218,8 +229,6 @@ const Projects = () => {
                     Currently in Development Stage.
                   </span>
                 )}
-
-                
               </div>
             </Card>
           ))}
