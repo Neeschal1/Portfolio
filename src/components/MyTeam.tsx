@@ -35,7 +35,7 @@ const Team = () => {
       role: "Graphics Designer",
       image: Aashish,
       linkedin: "#",
-      github: "#"
+      github: "https://www.linkedin.com/in/aashish-ghimire-179641235/"
     }
   ];
 
