@@ -16,6 +16,7 @@ import Kishancare from "../assets/Kishancare.png";
 import Anime from "../assets/Anime.png";
 import Soham from "../assets/Soham.jpg";
 import Chatty from "../assets/chatty.jpg";
+import Medical from "../assets/medical.webp";
 import Sohamweb from "../assets/Sohamweb.jpg";
 
 import { useState } from "react";
@@ -43,6 +44,15 @@ const Projects = () => {
       year: "2025",
       type: "Mobile Application",
       image: Soham,
+    },
+    {
+      title: "Medicare",
+      description:
+        "Developing a Medical app with a calming user experience and providing medical services.",
+      tags: ["React Native", "FastAPI", "Medical", "Android", "iOS"],
+      year: "2025",
+      type: "Mobile Application",
+      image: Medical,
     },
     {
       title: "Chatty",
