@@ -28,7 +28,7 @@ interface Project {
   year: string;
   type: string;
   image: string;
-  link?: string; // Optional link field
+  link?: string;
 }
 
 const Projects = () => {
@@ -72,6 +72,7 @@ const Projects = () => {
       year: "_____",
       type: "Web Page",
       image: Sohamweb,
+      link: "https://soham-web.vercel.app/"
     },
     {
       title: "Bihebari",
