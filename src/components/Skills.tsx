@@ -38,14 +38,6 @@ const Skills = () => {
         { name: "PyTorch", icon: SiPytorch },
       ],
     },
-    // {
-    //   title: "AI & Data",
-    //   color: "neon-pink",
-    //   skills: [
-    //     { name: "NumPy", icon: SiNumpy },
-    //     { name: "Pandas", icon: SiPandas },
-    //   ],
-    // },
   ];
 
   return (
