@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { useScrollAnimation, useParallax } from "../hooks/use-Parallax";
 import { FaFigma, FaReact, FaPython, FaJava, FaJs, FaPhoenixFramework } from "react-icons/fa";
-import { SiNumpy, SiPandas, SiFastapi, SiTailwindcss, SiPython, SiPytorch } from "react-icons/si";
+import { SiNumpy, SiPandas, SiFastapi, SiTailwindcss, SiPython, SiPytorch, SiPlotly } from "react-icons/si";
 import { MdBrush, MdDesignServices, MdFormatPaint } from "react-icons/md";
 
 const Skills = () => {
@@ -35,6 +35,7 @@ const Skills = () => {
       skills: [
         { name: "Numpy", icon: SiNumpy },
         { name: "Pandas", icon: SiPandas },
+        { name: "Matplotlib", icon: SiPlotly },
         { name: "PyTorch", icon: SiPytorch },
       ],
     },
